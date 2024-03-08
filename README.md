@@ -103,3 +103,18 @@ This chapter gives you a brief overview o call graphs and PointsTo analysis in A
 |Title |Tutorial | Soot Code        | Example Input  |
 | :---: |:-------------: |:-------------:| :-----:|
 | | | | |
+
+1. CFG:
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/9c3a6be6-dcbb-4def-a3c6-39175e4e8faf)
+
+2. Node Coverage:
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/4bbfdf27-d483-4653-905c-6b9687aaa54d)
+
+3. Edge Coverage:
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/600dff34-563f-40ba-b3bb-a37d7506b039)
+
+4. Edge-Pair Coverage:
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/c94abe1f-fc01-44b6-8ad8-9865c3f89a09)
+
+5. EFG: 
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/935085e2-ee43-45f7-a048-10fb1d7bd29c)
