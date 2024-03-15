@@ -119,3 +119,71 @@ This chapter gives you a brief overview o call graphs and PointsTo analysis in A
 5. EFG: 
 ![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/b5859fca-4aed-4bcf-83aa-a1656af2ae58)
 
+# Part 2: The answers for Step 1-5 for the selected app for class project: Lexica 
+Project function chosen:
+
+ @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ThemeManager.getInstance().applyTheme(this);
+
+        setContentView(R.layout.game);
+
+        gameWrapper = findViewById(R.id.game_wrapper);
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.app_name);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(v -> navigateToHome());
+
+        if (savedInstanceState != null) {
+            try {
+                restoreGame(savedInstanceState);
+            } catch (Exception e) {
+                // On API < 11, the above should work fine because onSaveInstanceState should be
+                // called before onPause. However, on API >= 11, onPause is always called _before_
+                // onSaveInstanceState. In these cases, we will have to resort to the preferences
+                // in order to restore our game (http://stackoverflow.com/a/28549669).
+                Log.e(TAG, "error restoring state from savedInstanceState, trying to look for saved game in preferences", e);
+                if (hasSavedGame()) {
+                    if (!restoreGame()) {
+                        finish();
+                        return;
+                    }
+                }
+            }
+            return;
+        }
+        try {
+            String action = getIntent().getAction();
+            switch (action) {
+                case "com.serwylo.lexica.action.RESTORE_GAME":
+                    if (!restoreGame()) {
+                        finish();
+                        return;
+                    }
+                    break;
+
+                case "com.serwylo.lexica.action.NEW_GAME":
+                    GameMode gameMode = getIntent().getExtras().getParcelable("gameMode");
+                    String[] board = getIntent().getExtras().getStringArray("board");
+
+                    String langName = getIntent().getExtras().getString("lang");
+                    Language language = Language.from(langName);
+
+                    game = board != null
+                        ? new Game(this, gameMode, language, board)
+                        : Game.generateGame(this, gameMode, language);
+
+                    setupGameView(game);
+                    break;
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error creating new Lexica game. Will finish() the GameActivity in the hope it gracefully returns to the main menu.", e);
+            finish();
+        }
+    }
+
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/b8fa66c8-b5e9-4e44-a81a-382fcb47e23d)
+
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/86159c23-5c27-4013-80d9-d386a32dd369)
