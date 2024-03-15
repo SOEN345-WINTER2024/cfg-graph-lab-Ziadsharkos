@@ -184,6 +184,68 @@ Project function chosen:
         }
     }
 
-![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/b8fa66c8-b5e9-4e44-a81a-382fcb47e23d)
+## CFG Graph Drawn for chosen function from project(using Draw.io)
 
 ![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/86159c23-5c27-4013-80d9-d386a32dd369)
+
+## Node Coverage for CFG (TRs and Test Paths):
+TR: Covered Nodes: All nodes labeled with their corresponding code lines (1 to 28)
+
+Test Paths:
+Path 1: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 13
+Path 2: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 14
+Path 3: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 14
+Path 4: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 14
+Path 5: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 13 -> 14 -> 15
+Path 6: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 14
+Path 7: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 14 -> 17 -> 18 -> 19
+Path 8: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 14 -> 17 -> 18 -> 20
+
+## Edge Coverage for CFG (TRs and Test Paths):
+Test Requirements:
+Ensure that every edge in the CFG is traversed at least once.
+
+Test Paths:
+Execute the method with savedInstanceState as null.
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 13
+Execute the method with a non-null savedInstanceState.
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 14
+Execute the method and enter the catch block.
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 14
+Execute the method and return from the catch block.
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 14
+Execute the method and enter the if block for hasSavedGame().
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 13 -> 14 -> 15
+Execute the method and return from the if block for hasSavedGame().
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 14
+Execute the method and enter the switch block with action "com.serwylo.lexica.action.RESTORE_GAME".
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 14 -> 17 -> 18 -> 19
+Execute the method and enter the switch block with action "com.serwylo.lexica.action.NEW_GAME".
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 14 -> 17 -> 18 -> 20
+
+## Edge-Pair Coverage for CFG (TRs and Test Paths):
+Test Requirements:
+Ensure that every pair of edges in the CFG is traversed at least once.
+Test Paths:
+Execute the method with savedInstanceState as null.
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 13
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 14
+Execute the method with a non-null savedInstanceState.
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 14
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 14
+Execute the method and enter the catch block.
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 14
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 14
+Execute the method and return from the catch block.
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 12 -> 14
+Execute the method and enter the if block for hasSavedGame().
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 13 -> 14 -> 15
+Execute the method and return from the if block for hasSavedGame().
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 12 -> 14
+Execute the method and enter the switch block with action "com.serwylo.lexica.action.RESTORE_GAME".
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 14 -> 17 -> 18 -> 19
+Execute the method and enter the switch block with action "com.serwylo.lexica.action.NEW_GAME".
+Edge 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8 -> 9 -> 10 -> 11 -> 14 -> 17 -> 18 -> 20
+
+## EFG:
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/6985172b-8e14-409f-b30e-734626d4d4f6)
