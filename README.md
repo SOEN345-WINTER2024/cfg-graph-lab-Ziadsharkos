@@ -186,7 +186,7 @@ Project function chosen:
 
 ## CFG Graph Drawn for chosen function from project(using Draw.io)
 
-![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/86159c23-5c27-4013-80d9-d386a32dd369)
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/a2b0139a-edb4-47df-b830-575048c9cad8)
 
 ## Node Coverage for CFG (TRs and Test Paths):
 TR: Covered Nodes: All nodes labeled with their corresponding code lines (1 to 28)
