@@ -117,4 +117,5 @@ This chapter gives you a brief overview o call graphs and PointsTo analysis in A
 ![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/c94abe1f-fc01-44b6-8ad8-9865c3f89a09)
 
 5. EFG: 
-![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/935085e2-ee43-45f7-a048-10fb1d7bd29c)
+![image](https://github.com/SOEN345-WINTER2024/cfg-graph-lab-Ziadsharkos/assets/93850680/b5859fca-4aed-4bcf-83aa-a1656af2ae58)
+
